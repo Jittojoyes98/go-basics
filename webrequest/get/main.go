@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"strings"
 )
+
+// ioutil does not exist deprecated, io is used now.
 
 func main(){
 	fmt.Println("Get request")
@@ -23,7 +25,7 @@ func PerformGetRequest(){
 	fmt.Println("Content length",response.ContentLength)
 
 	var responseString strings.Builder
-	content,err:=ioutil.ReadAll(response.Body)
+	content,err:=io.ReadAll(response.Body)
 	byteCount,_:=responseString.Write(content)
 	fmt.Println(byteCount,responseString.String())
 	// fmt.Println("the data ",string(content))
