@@ -19,7 +19,9 @@ func main()  {
 	newUser:= "hwwy"
 	fmt.Print(newUser,"\n")
 	fmt.Println(LoginToken)
-	if newUser=="hwwy"{
+	if newUser=="hww"{
 		fmt.Println("heyy something cooking")
+	}else{
+		fmt.Print("Nothing")
 	}
 }
