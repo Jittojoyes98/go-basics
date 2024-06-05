@@ -15,7 +15,7 @@ func main(){
 }
 
 func PerformGetRequest(){
-	const myurl="https://lco.dev/"
+	const myurl="https://go.dev/tour/concurrency/1"
 	response,err:=http.Get(myurl)
 	if err!=nil{
 		panic(err)
@@ -28,6 +28,6 @@ func PerformGetRequest(){
 	content,err:=io.ReadAll(response.Body)
 	byteCount,_:=responseString.Write(content)
 	fmt.Println(byteCount,responseString.String())
-	// fmt.Println("the data ",string(content))
+	fmt.Println("the data ",string(content))
 
 }
